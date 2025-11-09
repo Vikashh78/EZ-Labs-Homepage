@@ -8,8 +8,7 @@ export default function App() {
   const [submitted, setSubmitted] = useState(false);
 
 
-  const API_URL = 'https://vernanbackend.ezlab.in/api/contact-us/';
-
+const API_URL = 'https://vernanbackend.ezlab.in/api/contact-us/';
 
   const validate = () => {
     const e = {};
@@ -38,7 +37,7 @@ export default function App() {
 
     setLoading(true);
     try {
-      const res = await fetch(API_URL, {
+      const res = await fetch(API_URL.trim(), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
